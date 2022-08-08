@@ -1,7 +1,7 @@
 {
   "name": "task-manager-nodejs",
   "version": "1.0.0",
-  "description": "An in memory (NO DATABASE) web application for managing personal tasks and notes within a given task.",
+  "description": "An in memory (NO DATABASE) web application REST backend for managing personal tasks and notes within a given task.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
