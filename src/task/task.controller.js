@@ -2,13 +2,14 @@
 const createError = require('http-errors');
 const TaskService = require('./task.service');
 const ApiResponse = require('../common/apiResponse');
+const logger = require('../common/logger');
 
 module.exports = {
   getHelloWorld: (req, res, next) => {
     try {
       res.send(TaskService.getHelloWorld());
     } catch (error) {
-      console.log(error.message);
+      logger.log('error', error.message);
     }
   },
 
@@ -16,7 +17,7 @@ module.exports = {
     try {
       res.send(new ApiResponse(200, 'success', TaskService.getTasks()));
     } catch (error) {
-      console.log(error.message);
+      logger.log('error', error.message);
     }
   },
 };
