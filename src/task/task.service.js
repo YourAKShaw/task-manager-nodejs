@@ -21,8 +21,10 @@ module.exports = {
     return task;
   },
 
-  getTasks: () => {
-    return tasks;
+  getTasks: (completed) => {
+    return completed !== undefined
+      ? tasks.filter((task) => task.completed.toString() === completed)
+      : tasks;
   },
 
   getTask: (taskId) => {

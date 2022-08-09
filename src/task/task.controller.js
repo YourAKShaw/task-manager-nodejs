@@ -29,7 +29,13 @@ module.exports = {
 
   getTasks: (req, res, next) => {
     try {
-      res.send(new ApiResponse(200, 'success', TaskService.getTasks()));
+      res.send(
+        new ApiResponse(
+          200,
+          'success',
+          TaskService.getTasks(req.query.completed),
+        ),
+      );
     } catch (error) {
       logger.log('error', error.message);
       next(createError(500, error.message));
