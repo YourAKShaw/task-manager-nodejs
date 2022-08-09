@@ -5,6 +5,6 @@ const router = express.Router();
 const TaskController = require('./task.controller');
 
 // test route
-router.get('/', TaskController.getHelloWorld);
+router.get('/', TaskController.getTasks);
 
 module.exports = router;
