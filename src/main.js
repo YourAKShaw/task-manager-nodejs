@@ -1,6 +1,6 @@
 const express = require('express');
 const createError = require('http-errors');
-const TaskRoute = require('./task/task.route');
+const TaskRoutes = require('./task/task.route');
 const logger = require('./common/logger');
 
 const app = express();
@@ -9,7 +9,7 @@ app.use(express.json());
 
 // eslint-disable-next-line object-curly-spacing
 app.use(express.urlencoded({ extended: true }));
-app.use('/tasks', TaskRoute);
+app.use('/tasks', TaskRoutes);
 
 // 404 handler
 app.use((req, res, next) => {
