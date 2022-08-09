@@ -4,10 +4,6 @@ const createError = require('http-errors');
 const tasks = [];
 
 module.exports = {
-  getHelloWorld: () => {
-    return 'Hello World!';
-  },
-
   getTasks: () => {
     return tasks;
   },
