@@ -30,7 +30,7 @@ import Note from './note.entity';
  * Represents a task.
  * @typedef {Object} Task
  */
-export default class Task {
+class Task {
   id;
   title;
   description;
@@ -57,3 +57,5 @@ export default class Task {
     this.completed = completed;
   }
 }
+
+module.exports = Task;

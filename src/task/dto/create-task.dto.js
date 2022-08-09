@@ -1,7 +1,7 @@
 /**
  * Represents a create task request body.
  */
-export class CreateTaskDto {
+class CreateTaskDto {
   // required fields
   title;
 
@@ -10,3 +10,5 @@ export class CreateTaskDto {
   deadline;
   notes;
 }
+
+module.exports = CreateTaskDto;

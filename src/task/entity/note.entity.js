@@ -2,7 +2,7 @@
  * Represents a task note.
  * @typedef {Object} Note
  */
-export default class Note {
+class Note {
   title;
   body;
 
@@ -16,3 +16,5 @@ export default class Note {
     this.body = body;
   }
 }
+
+module.exports = Note;
