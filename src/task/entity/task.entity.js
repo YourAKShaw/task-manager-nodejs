@@ -24,7 +24,7 @@
  */
 
 // eslint-disable-next-line no-unused-vars
-import Note from './note.entity';
+const Note = require('./note.entity');
 
 /**
  * Represents a task.
