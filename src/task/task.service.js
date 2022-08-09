@@ -43,4 +43,13 @@ module.exports = {
     }
     return task;
   },
+
+  deleteTask: (taskId) => {
+    const task = tasks.find((task) => task.id === parseInt(taskId));
+    if (!task) {
+      throw new Error(`Task with id ${taskId} not found`);
+    }
+    tasks.splice(tasks.indexOf(task), 1);
+    return task;
+  },
 };

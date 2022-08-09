@@ -76,4 +76,20 @@ module.exports = {
       next(createError(500, error.message));
     }
   },
+
+  deleteTask: (req, res, next) => {
+    try {
+      const task = TaskService.getTask(req.params.taskId);
+      if (!task) {
+        logger.log('error', `Task with id ${req.params.taskId} not found`);
+        return next(createError(404, 'Task not found'));
+      }
+      TaskService.deleteTask(req.params.taskId);
+      logger.log('info', `Task with id ${req.params.taskId} deleted`);
+      res.send(new ApiResponse(200, 'success', task));
+    } catch (error) {
+      logger.log('error', error.message);
+      next(createError(500, error.message));
+    }
+  },
 };
