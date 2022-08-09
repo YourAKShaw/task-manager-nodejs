@@ -1,6 +1,7 @@
 const express = require('express');
 const createError = require('http-errors');
 const TaskRoute = require('./task/task.route');
+const logger = require('./common/logger');
 
 const app = express();
 
@@ -29,5 +30,5 @@ app.use((err, req, res, next) => {
 const PORT = 3000;
 
 app.listen(PORT, () => {
-  console.log('Server started on port ' + PORT + '...');
+  logger.log('info', `Server started on port ${PORT}`);
 });
