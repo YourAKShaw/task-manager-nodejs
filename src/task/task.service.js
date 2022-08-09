@@ -23,4 +23,8 @@ module.exports = {
   getTasks: () => {
     return tasks;
   },
+
+  getTask: (taskId) => {
+    return tasks.find((task) => task.id === parseInt(taskId));
+  },
 };
