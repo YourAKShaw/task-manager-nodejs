@@ -40,4 +40,4 @@ npm run dev
 npm run test
 ```
 
-Refer API Usage [here](rest.http)
+Refer API Usage [here](rest.http).
