@@ -1,4 +1,8 @@
-# Task Manager - Node.js
+<p align=center>
+  <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/nodejs-1-logo.png" alt="node-js-logo" height=400>
+</p>
+
+# Task Manager
 
 ## Description
 An in memory (NO DATABASE) web application CRUD based RESTful backend for managing personal tasks and notes within a given task.
@@ -12,16 +16,19 @@ An in memory (NO DATABASE) web application CRUD based RESTful backend for managi
 ### Setup
 
 `HTTPS`
+
 ```bash
 git clone https://github.com/Ak-Shaw/task-manager-nodejs.git
 ```
 
 `SSH`
+
 ```bash
 git clone git@github.com:Ak-Shaw/task-manager-nodejs.git
 ```
 
 `dependencies`
+
 ```bash
 npm install
 ```
