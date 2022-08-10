@@ -2,6 +2,17 @@
 
 ### Setup
 
+`HTTPS`
+```bash
+git clone https://github.com/Ak-Shaw/task-manager-nodejs.git
+```
+
+`SSH`
+```bash
+git clone git@github.com:Ak-Shaw/task-manager-nodejs.git
+```
+
+`dependencies`
 ```bash
 npm install
 ```
