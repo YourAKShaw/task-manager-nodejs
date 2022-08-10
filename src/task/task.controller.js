@@ -6,6 +6,7 @@ const ApiResponse = require('../common/apiResponse');
 const logger = require('../common/logger');
 const createTaskSchema = require('./schema/create-task.schema');
 const updateTaskSchema = require('./schema/update-task.schema');
+const deadlineValidator = require('../common/helpers/deadlineValidator');
 
 module.exports = {
   createTask: (req, res, next) => {
@@ -15,6 +16,12 @@ module.exports = {
       if (error) {
         logger.log('error', error.message);
         return next(createError(400, error.message));
+      }
+      // eslint-disable-next-line object-curly-spacing
+      const { deadline } = req.body;
+      if (deadline && !deadlineValidator(deadline)) {
+        logger.log('error', 'Invalid deadline');
+        return next(createError(400, 'Invalid deadline'));
       }
       const task = TaskService.createTask(req.body);
       logger.log('info', `Task with id ${task.id} created`);
@@ -63,6 +70,12 @@ module.exports = {
       if (error) {
         logger.log('error', error.message);
         return next(createError(400, error.message));
+      }
+      // eslint-disable-next-line object-curly-spacing
+      const { deadline } = req.body;
+      if (deadline && !deadlineValidator(deadline)) {
+        logger.log('error', 'Invalid deadline');
+        return next(createError(400, 'Invalid deadline'));
       }
       const task = TaskService.updateTask(req.params.taskId, req.body);
       if (!task) {
