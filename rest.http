@@ -1,0 +1,55 @@
+### Create a Task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 1 Title",
+  "description": "Task 1 Description",
+  "deadline": "10/08/2022",
+  "notes": [
+    {
+      "title": "Note 1 Title",
+      "body": "Note 1 Body"
+    },
+    {
+      "title": "Note 2 Title",
+      "body": "Note 2 Body"
+    }
+  ]
+}
+
+### Get Tasks
+GET http://localhost:3000/tasks
+
+### Get Completed Tasks
+GET http://localhost:3000/tasks?completed=true
+
+### Get Incomplete Tasks
+GET http://localhost:3000/tasks?completed=false
+
+### Get a Task
+GET http://localhost:3000/tasks/:taskId
+
+### Update a Task
+PATCH http://localhost:3000/tasks/:taskId
+Content-Type: application/json
+
+{
+  "title": "Task 1 Title updated",
+  "description": "Task 1 Description updated",
+  "deadline": "10/08/2022",
+  "notes": [
+    {
+      "title": "Note 1 Title updated",
+      "body": "Note 1 Body updated"
+    },
+    {
+      "title": "Note 2 Title updated",
+      "body": "Note 2 Body updated"
+    }
+  ],
+  "completed": true
+}
+
+### Delete a Task
+DELETE http://localhost:3000/tasks/:taskId
