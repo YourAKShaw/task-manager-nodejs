@@ -8,7 +8,7 @@ const schema = Joi.object({
   notes: Joi.array().items(
     Joi.object({
       title: Joi.string().required(),
-      body: Joi.string().required(),
+      body: Joi.string(),
     }),
   ),
   completed: Joi.boolean(),
