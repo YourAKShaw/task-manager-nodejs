@@ -8,7 +8,7 @@
 An in memory (NO DATABASE) web application CRUD based RESTful backend for managing personal tasks and notes within a given task.
 
 <p align=center>
-  <img src="https://i.ibb.co/jyTNhMh/task-manager-nodejs-console-rounded-corners.gif" alt="sample-run-gif" height=auto>
+  <img src="https://i.ibb.co/V06H2hT/task-manager-nodejs-console.gif" alt="sample-run-gif" height=auto>
 </p>
 
 ### Pre-setup dependencies
