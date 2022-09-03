@@ -2,7 +2,7 @@
   "name": "task-manager-nodejs",
   "version": "1.0.0",
   "description": "An in memory (NO DATABASE) web application REST backend for managing personal tasks and notes within a given task.",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
     "start": "node src/main.js",
     "dev": "nodemon src/main.js",
