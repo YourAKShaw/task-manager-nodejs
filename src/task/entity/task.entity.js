@@ -39,7 +39,7 @@ class Task {
   completed;
 
   /**
-   * Represents a book.
+   * Represents a task.
    * @constructor
    * @param {number} id - The id of the task.
    * @param {string} title - The title of the task.
