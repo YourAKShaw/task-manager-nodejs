@@ -22,7 +22,7 @@ module.exports = {
   },
 
   getTasks: (completed) => {
-    return completed !== undefined
+    return typeof completed === 'string'
       ? tasks.filter((task) => task.completed.toString() === completed)
       : tasks;
   },
