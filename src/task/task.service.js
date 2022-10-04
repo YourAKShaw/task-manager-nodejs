@@ -34,7 +34,7 @@ module.exports = {
   updateTask: (taskId, updateTaskDto) => {
     const task = tasks.find((task) => task.id === parseInt(taskId));
     if (!task) {
-      throw new Error(`Task with id ${taskId} not found`);
+      return null;
     }
     for (const key in updateTaskDto) {
       if (Object.prototype.hasOwnProperty.call(updateTaskDto, key)) {
@@ -47,7 +47,7 @@ module.exports = {
   deleteTask: (taskId) => {
     const task = tasks.find((task) => task.id === parseInt(taskId));
     if (!task) {
-      throw new Error(`Task with id ${taskId} not found`);
+      return null;
     }
     tasks.splice(tasks.indexOf(task), 1);
     return task;
